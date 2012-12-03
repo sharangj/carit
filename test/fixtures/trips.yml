@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  from: MyString
+  to: MyString
+  via: MyString
+  tripdate: 2012-12-03
+  starttime: 2012-12-03 18:38:15
+  maxriders: 1
+  comments: MyText
+
+two:
+  from: MyString
+  to: MyString
+  via: MyString
+  tripdate: 2012-12-03
+  starttime: 2012-12-03 18:38:15
+  maxriders: 1
+  comments: MyText
