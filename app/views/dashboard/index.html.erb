@@ -1,27 +1,13 @@
-
-
-	
-	 <script>
-	$(document).ready(function() {
-		var max = 0;
-		$("label").each(function(){
-			if ($(this).width() > max)
-				max = $(this).width();   
-		});
-		$("label").width(max);
-	});
- </script>
- 
-<h1>Welcome to your dashhhboard</h1>
+<h1>Welcome to your dashboard</h1>
 
 	 <div data-role="content">
 		<div data-role="navbar" class="ui-bar">
 				<div data-role="NavigationBar" data-type="horizontal">
 					<ul>
 						<li><a href="index.html" data-role="button" data-theme="b" >Search Trip</a> </li>
-						<li><a href="#CreateTrips" data-role="button">Create Trip</a> </li>
+						<li><a href="trips/new.html" data-role="button">Create Trip</a> </li>
 						<li><a href="#Profile" data-role="button">Profile</a>  </li>
-						<li><a href="#MyTrip" data-role="button">My Trip</a> </li>
+						<li><a href="/trips" data-role="button">My Trip</a> </li>
 					</ul>
 				</div>
 			</div>
@@ -47,10 +33,10 @@
 						<option value="Bonn">Bonn</option>
 				    </select>
 			    </li>
-				
-				<P><LI>Date: <input type="text" id="datepicker" /> 
+			        <div data-role="fieldcontain">	
+				<p><label for="date">Date: <input type="date" id="date" name="date" /></label>
+    				</div> 
 				<a href="#SearchResults" data-role="button" data-inline="true" data-theme="c">Go</a></LI></P>
-				$("datepicker").center();
 	</ul>
 	
 	

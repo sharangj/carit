@@ -1,3 +1,9 @@
 <h1>Welcome to Carpool</h1>
 
-<%= render :partial => 'new', :locals => {:title => "Welcome"} %>
+<%- if controller_name != 'sessions' %>
+ <%= link_to "Sign in", new_session_path(resource_name), "data-role" => "button", "data-theme" => "b" %><br />
+<% end -%>
+
+<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  <%= link_to "Sign up", new_registration_path(resource_name), "data-role" => "button", "data-theme" => "a" %><br />
+<% end -%>
