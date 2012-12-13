@@ -1,19 +1,22 @@
 <h1>Listing trips</h1>
 
 <table>
+<thead>
   <tr>
     <th>From</th>
     <th>To</th>
     <th>Via</th>
-    <th>Tripdate</th>
-    <th>Starttime</th>
-    <th>Maxriders</th>
+    <th>Trip Date</th>
+    <th>Start Time</th>
+    <th>Max Riders</th>
     <th>Comments</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
+</thead>
 
+ <tbody>
 <% @trips.each do |trip| %>
   <tr>
     <td><%= trip.from %></td>
@@ -28,6 +31,7 @@
     <td><%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
+</tbody>
 </table>
 
 <br />

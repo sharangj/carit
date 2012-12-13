@@ -1,3 +1,30 @@
 // Place all the styles related to the trips controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+		table {
+			text-align: center;
+			font-size: 12px;
+			font-family: verdana;
+			background: #c0c0c0;
+		}
+ 
+		table thead tr,
+		table tfoot tr {
+			background: #BDB76B;
+			color:white;
+			border-collapse:collapse;
+			
+		}
+ 
+		table tbody tr {
+			background: #FFFFE0;
+		}
+ 
+		td, th {
+			padding: 8px 8px 8px 8px;
+		}
+		
+		td {
+			border: 1px solid #BDB76B;
+		}

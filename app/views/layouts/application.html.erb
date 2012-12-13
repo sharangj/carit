@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,3 +33,42 @@
 </div>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Carpool</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <%= javascript_include_tag "application" %>
+  <script src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"></script>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+<div data-role="page">
+<div data-role="header"> 
+ <h1>Carpool</h1> 
+</div> 
+<div>
+  <% if user_signed_in? %>
+    Signed in as <%= current_user.email %>. Not you?
+    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+  <% else %>
+   <!-- <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %> -->
+   <p> Please sign in </p>
+  <% end %>
+</div>
+ 
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+<% end %>
+
+<%= yield %>
+</div>
+</body>
+</html>
+>>>>>>> 93a4433450fb846630517350ae4fdba3be547c73

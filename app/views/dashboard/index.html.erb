@@ -1,1 +1,63 @@
-<h1>Welcome to your dashboard</h1>
+
+
+	
+	 <script>
+	$(document).ready(function() {
+		var max = 0;
+		$("label").each(function(){
+			if ($(this).width() > max)
+				max = $(this).width();   
+		});
+		$("label").width(max);
+	});
+ </script>
+ 
+<h1>Welcome to your dashhhboard</h1>
+
+	 <div data-role="content">
+		<div data-role="navbar" class="ui-bar">
+				<div data-role="NavigationBar" data-type="horizontal">
+					<ul>
+						<li><a href="index.html" data-role="button" data-theme="b" >Search Trip</a> </li>
+						<li><a href="#CreateTrips" data-role="button">Create Trip</a> </li>
+						<li><a href="#Profile" data-role="button">Profile</a>  </li>
+						<li><a href="#MyTrip" data-role="button">My Trip</a> </li>
+					</ul>
+				</div>
+			</div>
+	  </div>	 
+		
+		<ul>
+				 <LI data-role="fieldcontain">
+					<label for="fromPlace" class="select">From</label>
+				    <select name="fromPlace" id="fromPlace">
+						<option value="Heidelberg">Heidelberg</option>
+						<option value="Berlin">Berlin</option>
+						<option value="Munich">Munich</option>
+						<option value="Bonn">Bonn</option>
+				    </select>
+			    </LI>
+				
+				<li data-role="fieldcontain">
+					<label for="Toplace" class="select">To</label>
+				    <select name="Toplace" id="Toplace">
+						<option value="Heidelberg">Heidelberg</option>
+						<option value="Berlin">Berlin</option>
+						<option value="Munich">Munich</option>
+						<option value="Bonn">Bonn</option>
+				    </select>
+			    </li>
+				
+				<P><LI>Date: <input type="text" id="datepicker" /> 
+				<a href="#SearchResults" data-role="button" data-inline="true" data-theme="c">Go</a></LI></P>
+				$("datepicker").center();
+	</ul>
+	
+	
+		<nav data-role="navbar">
+		<ul>
+			<li><a href="home" data-icon="home">Home</a></li>
+			<li><a href="Photos" data-icon="grid">Settings</a></li>
+			<li><a href="Info" data-icon="info">About</a></li>
+		</ul>
+	</div>	
