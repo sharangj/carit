@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>From:</b>
+  <%= @trip.from %>
+</p>
+
+<p>
+  <b>To:</b>
+  <%= @trip.to %>
+</p>
+
+<p>
+  <b>Via:</b>
+  <%= @trip.via %>
+</p>
+
+<p>
+  <b>Tripdate:</b>
+  <%= @trip.tripdate %>
+</p>
+
+<p>
+  <b>Starttime:</b>
+  <%= @trip.starttime %>
+</p>
+
+<p>
+  <b>Maxriiders:</b>
+  <%= @trip.maxriders %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%= @trip.comments %>
+</p>
+
+
+<%= link_to 'Edit', edit_trip_path(@trip) %> |
+<%= link_to 'Back', trips_path %> |
+<%= link_to 'Destroy', @trip, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+

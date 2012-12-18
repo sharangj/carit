@@ -1,6 +1,6 @@
-<!-- <h1>Listing trips</h1>
+<h1>Listing trips</h1>
 
-<table>
+<!--<table>
 <thead>
   <tr>
     <th>From</th>
@@ -18,7 +18,7 @@
 
  <tbody> -->
 <% @trips.each do |trip| %>
-  <ul data-role="listview">
+  <ul data-role = "listview" data-theme = "a" data-inline = "true">
    <!-- <td><%= trip.from %></td>
     <td><%= trip.to %></td>
     <td><%= trip.via %></td>
@@ -29,7 +29,6 @@
     <li><%= link_to trip.from + '-' + trip.to + 'via' + trip.via + 'on' + trip.tripdate.to_s + '|' + trip.starttime.to_s, trip %></li>
    <!-- <td><%= link_to 'Edit', edit_trip_path(trip) %></td>
     <td><%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
-    
   </tr>
 <% end %>
 </tbody>
@@ -37,4 +36,4 @@
 
 <br />
 
-<%= link_to 'New Trip', new_trip_path %>
+<!--<%= link_to 'New Trip', new_trip_path %>-->

@@ -11,7 +11,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121203173815) do
+ActiveRecord::Schema.define(:version => 20121218165144) do
+
+  create_table "profile1s", :force => true do |t|
+    t.string   "name"
+    t.date     "birthdate"
+    t.string   "gender"
+    t.string   "profession"
+    t.string   "nationality"
+    t.integer  "phonenumber"
+    t.text     "hobbies"
+    t.text     "likes"
+    t.text     "dislikes"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "profiles", :force => true do |t|
+    t.string   "name"
+    t.integer  "age"
+    t.string   "profession"
+    t.string   "nationality"
+    t.text     "hobbies"
+    t.text     "likes"
+    t.text     "dislikes"
+    t.string   "languages"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.boolean  "gender"
+  end
 
   create_table "trips", :force => true do |t|
     t.string   "from"
@@ -23,6 +51,7 @@ ActiveRecord::Schema.define(:version => 20121203173815) do
     t.text     "comments"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|

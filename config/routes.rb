@@ -1,9 +1,13 @@
 Carpool::Application.routes.draw do
-  resources :trips
+  resources :profile1s
 
+  resources :trips
   devise_for :users
   resources :dashboard
   root to: "home#index"
+  resources :mytrips
+  match '/users/mytrips' => 'mytrips#index'
+  match '/users/trips/new' => 'trips#new'
   # The priority is based upon order of creation:
   # first created -> highest priority.
   
@@ -35,7 +39,10 @@ Carpool::Application.routes.draw do
   #     resources :comments, :sales
   #     resource :seller
   #   end
-
+     resources :users do
+    	resources :profile1s
+	resources :trips
+     end
   # Sample resource route with more complex sub-resources
   #   resources :products do
   #     resources :comments

@@ -1,4 +1,5 @@
 class TripsController < ApplicationController
+ 
   # GET /trips
   # GET /trips.json
   def index
@@ -24,7 +25,7 @@ class TripsController < ApplicationController
   # GET /trips/new
   # GET /trips/new.json
   def new
-    @trip = Trip.new
+    @trip = current_user.trips.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,7 +41,7 @@ class TripsController < ApplicationController
   # POST /trips
   # POST /trips.json
   def create
-    @trip = Trip.new(params[:trip])
+    @trip = current_user.trips.new(params[:trip])
 
     respond_to do |format|
       if @trip.save

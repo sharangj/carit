@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+  
   <div class="field">
     <%= f.label :from %><br />
     <%= f.text_field :from %>
@@ -25,7 +25,8 @@
   </div>
   <div class="field">
     <%= f.label :tripdate %><br />
-    <%= f.date_select :tripdate %>
+    <%= f.date_select :tripdate, "type" => "date" %> 
+   <!-- <input type="date" id="tripdate" value="tripdate" name="tripdate" /> -->
   </div>
   <div class="field">
     <%= f.label :starttime %><br />
