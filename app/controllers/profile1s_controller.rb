@@ -24,7 +24,7 @@ class Profile1sController < ApplicationController
   # GET /profile1s/new
   # GET /profile1s/new.json
   def new
-    @profile1 = Profile1.new
+    @profile1 = current_user.profile1.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,7 +40,7 @@ class Profile1sController < ApplicationController
   # POST /profile1s
   # POST /profile1s.json
   def create
-    @profile1 = Profile1.new(params[:profile1])
+    @profile1 = current_user.profile1.build(params[:profile1])
 
     respond_to do |format|
       if @profile1.save

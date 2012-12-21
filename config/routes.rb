@@ -1,6 +1,6 @@
 Carpool::Application.routes.draw do
   resources :profile1s
-
+  resources :myprofiles
   resources :trips
   devise_for :users
   resources :dashboard
@@ -8,6 +8,7 @@ Carpool::Application.routes.draw do
   resources :mytrips
   match '/users/mytrips' => 'mytrips#index'
   match '/users/trips/new' => 'trips#new'
+  match '/users/myprofiles' => 'myprofiles#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
   
@@ -40,7 +41,7 @@ Carpool::Application.routes.draw do
   #     resource :seller
   #   end
      resources :users do
-    	resources :profile1s
+    	resource :profile1s
 	resources :trips
      end
   # Sample resource route with more complex sub-resources
