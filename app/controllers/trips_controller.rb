@@ -3,12 +3,11 @@ class TripsController < ApplicationController
   # GET /trips
   # GET /trips.json
   def index
-    @trips = Trip.all
-
+    @trips = Trip.search(params[:search])
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @trips }
-    end
+  end
   end
 
   # GET /trips/1
@@ -80,5 +79,5 @@ class TripsController < ApplicationController
       format.html { redirect_to trips_url }
       format.json { head :no_content }
     end
-  end
-end
+ end
+end  

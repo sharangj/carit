@@ -13,9 +13,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div data-role="page">
-<div data-role="header"> 
- <h1>Carpool</h1> 
+<div data-role="page" data-theme="a">
+<div data-role="header" data-position="fixed"> 
+ <h1>Carpool</h1>
+ <% if user_signed_in? %>
+ <a href="/" data-icon="home">Home</a>
+ <a href="history.go(-1)" data-icon="back" data-rel="back">Back</a>
+ <% end %>
 </div> 
 <div>
   <% if user_signed_in? %>

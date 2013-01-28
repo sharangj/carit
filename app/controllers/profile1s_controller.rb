@@ -1,4 +1,5 @@
 class Profile1sController < ApplicationController
+
   # GET /profile1s
   # GET /profile1s.json
   def index
@@ -24,11 +25,11 @@ class Profile1sController < ApplicationController
   # GET /profile1s/new
   # GET /profile1s/new.json
   def new
-    @profile1 = current_user.profile1.build
+   @profile1 = Profile1.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @profile1 }
+    #  format.json { render json: @profile1 }
     end
   end
 
@@ -40,11 +41,11 @@ class Profile1sController < ApplicationController
   # POST /profile1s
   # POST /profile1s.json
   def create
-    @profile1 = current_user.profile1.build(params[:profile1])
+    @profile1 = current_user.create_profile1(params[:profile1])
 
     respond_to do |format|
       if @profile1.save
-        format.html { redirect_to @profile1, notice: 'Profile1 was successfully created.' }
+        format.html { redirect_to @profile1, notice: 'Profile was successfully created.' }
         format.json { render json: @profile1, status: :created, location: @profile1 }
       else
         format.html { render action: "new" }
@@ -60,7 +61,7 @@ class Profile1sController < ApplicationController
 
     respond_to do |format|
       if @profile1.update_attributes(params[:profile1])
-        format.html { redirect_to @profile1, notice: 'Profile1 was successfully updated.' }
+        format.html { redirect_to @profile1, notice: 'Profile was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

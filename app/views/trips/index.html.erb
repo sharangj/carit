@@ -1,6 +1,13 @@
-<!-- <h1>Listing trips</h1>
+<h1>Look for your trips here..</h1>
 
-<table>
+<%= form_tag('trips', :method => 'get') do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil, "data-inline" => "true" , "data-icon" => "search", "data-iconpos" => "left", "data-theme" => "b" %>
+  </p>
+<% end %>
+
+<!--<table>
 <thead>
   <tr>
     <th>From</th>
@@ -26,7 +33,7 @@
     <td><%= trip.starttime %></td>
     <td><%= trip.maxriders %></td>
     <td><%= trip.comments %></td> -->
-    <li><%= link_to trip.from + '-' + trip.to + 'via' + trip.via + 'on' + trip.tripdate.to_s + '|' + trip.starttime.to_s, trip %></li>
+    <li><%= link_to trip.from + '-' + trip.to + '|' + trip.via , trip %></li>
    <!-- <td><%= link_to 'Edit', edit_trip_path(trip) %></td>
     <td><%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
     
@@ -37,4 +44,4 @@
 
 <br />
 
-<%= link_to 'New Trip', new_trip_path %>
+<!--<%= link_to 'New Trip', new_trip_path, "data-inline"=>"true","data-role"=>"button","data-theme"=>"b" %>-->

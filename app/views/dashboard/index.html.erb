@@ -1,18 +1,19 @@
-<h1>Welcome to your dashboard</h1>
-
-	 <div data-role="content">
+<h1>Start your Journey here..</h1>
+	 <!--<div data-role="content">
 		<div data-role="navbar" class="ui-bar">
-				<div data-role="NavigationBar" data-type="horizontal">
+				<div data-role="NavigationBar" data-type="horizontal" data-theme="f">
 					<ul>
-						<li><a href="index.html" data-role="button" data-theme="b" >Search Trip</a> </li>
+						<li><a href="trips/index" data-role="button" data-theme="b" class="ui-btn-active" >Search Trip</a> </li>
 						<li><a href="trips/new" data-role="button">Create Trip</a> </li>
 						<li><a href="myprofiles" data-role="button">Profile</a>  </li>
 						<li><a href="mytrips" data-role="button">My Trip</a> </li>
 					</ul>
 				</div>
 			</div>
-	  </div>	 
-		
+		</div>
+
+				 
+	<div data-role="page" id="search">	
 		<ul>
 				 <LI data-role="fieldcontain">
 					<label for="fromPlace" class="select">From</label>
@@ -39,11 +40,48 @@
 				<a href="#SearchResults" data-role="button" data-inline="true" data-theme="c">Go</a></LI></P>
 	</ul>
 	
+	</div>
+       
+       
+       <div data-role="content">
+	<div class="content-primary">
+		<div data-role="fieldcontain">
+ 		<a href="#search" data-role="button" data-theme="b" data-icon="search" data-iconpos="top" data-inline="true">Search Trip</a>        
+	        
+		
+		<a href="trips/new" data-role="button" data-theme="b" data-icon="plus" data-iconpos="top" data-inline="true">Create Trip</a>
+		</div>
+		<div data-role="fieldcontain">
+		<a href="myprofiles" data-role="button" data-theme="b" data-icon="info" data-iconpos="top" data-inline="true">My Profile</a>
 	
-		<nav data-role="navbar">
+		<a href="mytrips" data-role="button" data-theme="b" data-icon="star" data-iconpos="top" data-inline="true">My trips</a>
+		</div>
+	</div>
+      </div>-->
+	<div>
+		<fieldset class="ui-grid-a">
+				<div class="ui-block-a"><a href="trips" data-role="button" data-theme="b" data-icon="search" data-iconpos="top">Search</a></div>
+				<div class="ui-block-b"><a href="trips/new" data-role="button" data-theme="b" data-icon="plus" data-iconpos="top">Create Trip</a></div>
+	    </fieldset>
+		</div>
+	<div>
+		<fieldset class="ui-grid-a">
+				<div class="ui-block-a"><a href="myprofiles" data-role="button" data-theme="b" data-icon="info" data-iconpos="top">My Profile</a></div>
+				<div class="ui-block-b"><a href="mytrips" data-role="button" data-theme="b" data-icon="star" data-iconpos="top">My Trips</a></div>
+	    </fieldset>
+		</div>
+	<!--	<div data-role="navbar">
 		<ul>
-			<li><a href="home" data-icon="home">Home</a></li>
 			<li><a href="Photos" data-icon="grid">Settings</a></li>
 			<li><a href="Info" data-icon="info">About</a></li>
 		</ul>
-	</div>	
+	</div>-->
+	<div data-role="footer" data-position="fixed" data-tap-toggle="false">
+         <div data-role="navbar">
+                 <ul>
+                   <li><a href="settings" data-icon="grid">Settings</a></li>
+                   <li><a href="#two" data-icon="info">About</a></li>
+                
+                 </ul>
+         </div><!-- /navbar -->                             
+</div>	

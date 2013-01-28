@@ -1,6 +1,6 @@
-<h1>Listing profile1s</h1>
+<h1>Your Profile</h1>
 
-<table>
+<!--<table>
   <tr>
     <th>Name</th>
     <th>Birthdate</th>
@@ -14,11 +14,11 @@
     <th></th>
     <th></th>
     <th></th>
-  </tr>
+  </tr>-->
 
 <% @profile1s.each do |profile1| %>
-  <tr>
-    <td><%= profile1.name %></td>
+  
+<!--    <td><%= profile1.name %></td>
     <td><%= profile1.birthdate %></td>
     <td><%= profile1.gender %></td>
     <td><%= profile1.profession %></td>
@@ -27,13 +27,57 @@
     <td><%= profile1.hobbies %></td>
     <td><%= profile1.likes %></td>
     <td><%= profile1.dislikes %></td>
-    <td><%= link_to 'Show', profile1 %></td>
-    <td><%= link_to 'Edit', edit_profile1_path(profile1) %></td>
-    <td><%= link_to 'Destroy', profile1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+    <td><%= link_to 'Show', profile1 %></td> -->
+    <p>
+  <b>Name:</b>
+  <%= profile1.name %>
+</p>
+
+<p>
+  <b>Birthdate:</b>
+  <%= profile1.birthdate %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= profile1.gender %>
+</p>
+
+<p>
+  <b>Profession:</b>
+  <%= profile1.profession %>
+</p>
+
+<p>
+  <b>Nationality:</b>
+  <%= profile1.nationality %>
+</p>
+
+<p>
+  <b>Phonenumber:</b>
+  <%= profile1.phonenumber %>
+</p>
+
+<p>
+  <b>Hobbies:</b>
+  <%= profile1.hobbies %>
+</p>
+
+<p>
+  <b>Likes:</b>
+  <%= profile1.likes %>
+</p>
+
+<p>
+  <b>Dislikes:</b>
+  <%= profile1.dislikes %>
+</p>
+
+  <%= link_to 'Edit', edit_profile1_path(profile1), "data-role" => "button", "data-inline" => "true","data-theme" => "a" %></td>
+  <!--<%= link_to 'Destroy', profile1, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+ 
 <% end %>
 </table>
 
-<br />
 
-<%= link_to 'New Profile1', new_profile1_path %>
+<!--<%= link_to ', new_profile1_path % >-->

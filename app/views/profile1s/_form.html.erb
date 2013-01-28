@@ -47,7 +47,16 @@
     <%= f.label :dislikes %><br />
     <%= f.text_area :dislikes %>
   </div>
-  <div class="actions">
+  <!--<div class="actions">
     <%= f.submit %>
-  </div>
+  </div> -->
+  <div class="actions">
+  <p>
+  <% if controller.action_name == 'new' %>
+  <%= f.submit "Create", "data-theme" => "a" %> 
+  <% elsif controller.action_name == 'edit' %>
+  <%= f.submit "Update your profile", "data-theme" => "a"%> 
+  <% end %>
+  </p>
+  </div> 
 <% end %>
